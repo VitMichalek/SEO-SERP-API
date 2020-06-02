@@ -2,7 +2,7 @@
 
 include "seoserpapi.php";
 
-//$uuid is id createt and returned on setTask/setMajestic!
+//$uuid is id createt and returned on setTask/setLinkMetrics!
 //where in setTask define pingback_url  send $uuid in $_GET["uuid"];
 
 $postArray = array(
