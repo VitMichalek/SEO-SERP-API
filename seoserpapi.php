@@ -2,10 +2,11 @@
 
 class SEOSERPAPI{
 	static $apiToken = "";
+	static $sandbox = false;
 	static $apiUrl = "https://www.seoserpapi.com/api/";
 	static function send($api="",$data=array()){
 		if(SEOSERPAPI::$apiToken != "" && $api != ""){			
-			$post = array('data' => $data,'token'=> SEOSERPAPI::$apiToken);
+			$post = array('data' => $data,'token'=> SEOSERPAPI::$apiToken, 'sandbox' => SEOSERPAPI::$sandbox);
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL, SEOSERPAPI::$apiUrl.$api);
 			curl_setopt($ch, CURLOPT_POST,1);
@@ -22,7 +23,7 @@ class SEOSERPAPI{
 	
 	static function get($api="",$data=array()){
 		if(SEOSERPAPI::$apiToken != "" && $api != ""){			
-			$post = array('data' => $data,'token'=> SEOSERPAPI::$apiToken);
+			$post = array('data' => $data,'token'=> SEOSERPAPI::$apiToken, 'sandbox' => SEOSERPAPI::$sandbox);
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL,SEOSERPAPI::$apiUrl.$api);
 			curl_setopt($ch, CURLOPT_POST,1);
