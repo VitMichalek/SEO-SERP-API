@@ -8,11 +8,11 @@ include "seoserpapi.php";
 
 $postArray = array(
 	"urls"=>array(
-		"0"=>array(
-			"url"=>"seoserpapi.com",
-			"id"=>"1234"
+		array(
+			"url"=>"seoserpapi.com",//domain
+			"id"=>"1234"//own id,not required
 		),
-		"500"=>array(
+		array(
 			"url"=>"semor.cz",
 			"id"=>"487988"
 		)
@@ -23,7 +23,7 @@ $postArray = array(
 );
 
 SEOSERPAPI::$apiToken = "XXXX";
-$result = SEOSERPAPI::send("v3/setLinkMetrics/",$postArray);
+$result = SEOSERPAPI::send("v3/bulkBacklink/",$postArray);
 print_r($result);
 if(is_array($result)){
 	if($result["status"] == 200){
