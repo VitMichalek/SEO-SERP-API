@@ -1,6 +1,6 @@
 <?php
 
-include "seoserpapi.php";
+include "API/seoserpapi.php";
 
 // this query get last 100 backlinks between 2020-06-01 and 2020-06-11 to semor.cz domain
 // mode - domain - links for all urls off domain, url - links only for this url

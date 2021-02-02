@@ -1,6 +1,9 @@
 <?
+/*
+Check your task status
+*/
 
-include "seoserpapi.php";
+include "API/seoserpapi.php";
 
 
 $postArray = array(

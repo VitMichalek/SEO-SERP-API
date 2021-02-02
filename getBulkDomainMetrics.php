@@ -1,6 +1,6 @@
 <?php
 
-include "seoserpapi.php";
+include "API/seoserpapi.php";
 
 // id is your ID (number,int(11), not required
 //pingback_url -> this url send notification when task is ready for download. send  uuid in get $_GET["uuid"]
