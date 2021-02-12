@@ -25,16 +25,86 @@ $result = SEOSERPAPI::send("v3/getBulkSearchVolume/",$postArray);
 print_r($result);
 if(is_array($result)){
 	if($result["status"] == 200){
-		$uuid = $result["uuid"];//uuid for getResults
+		$result = $result["result"];
 	}else{
 		echo $result["error"];
 	}
 }else{
 	
 }
-echo $uuid;
-
-
-
-
+/*
+{
+  "status": 200,
+  "result": [
+    {
+      "keyword": "adsense blank ads how long",
+      "competition": 0.047619047619047616,
+      "cpc": 0,
+      "search_volume": 10,
+      "monthly_searches": [
+        {
+          "year": 2019,
+          "month": 10,
+          "search_volume": 10
+        },
+        {
+          "year": 2019,
+          "month": 9,
+          "search_volume": 0
+        },
+        {
+          "year": 2019,
+          "month": 8,
+          "search_volume": 10
+        },
+        {
+          "year": 2019,
+          "month": 7,
+          "search_volume": 0
+        },
+        {
+          "year": 2019,
+          "month": 6,
+          "search_volume": 0
+        },
+        {
+          "year": 2019,
+          "month": 5,
+          "search_volume": 0
+        },
+        {
+          "year": 2019,
+          "month": 4,
+          "search_volume": 10
+        },
+        {
+          "year": 2019,
+          "month": 3,
+          "search_volume": 10
+        },
+        {
+          "year": 2019,
+          "month": 2,
+          "search_volume": 10
+        },
+        {
+          "year": 2019,
+          "month": 1,
+          "search_volume": 10
+        },
+        {
+          "year": 2018,
+          "month": 12,
+          "search_volume": 10
+        },
+        {
+          "year": 2018,
+          "month": 11,
+          "search_volume": 10
+        }
+      ]
+    }
+  ]
+}
+*/
 ?>
